@@ -97,6 +97,20 @@ img {
   outline-offset: -2px; */
 }
 
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+}
+@media only screen and (min-width: 1168px) {
+  .container {
+    max-width: 1168px;
+    padding: 0 16px;
+  }
+}
+
 .team-title,
 .portfolio-title {
     margin-bottom: 72px;
