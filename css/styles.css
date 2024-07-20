@@ -65,6 +65,7 @@ ol {
 
 address {
   font-style: normal;
+  display: none;
 }
 
 a {
@@ -90,13 +91,8 @@ img {
 /* #region Common */
 .container {
   max-width: 320px;
-  padding-left: 16px;
-  padding-right: 16px;
-  margin-left: auto;
-  margin-right: auto;
-  /* max-width: 1158px;
-  padding: 0 15px;
-  margin: 0 auto; */
+  padding: 0 16px;
+  margin: 0 auto;
 
   /* outline: 2px solid red;
   outline-offset: -2px; */
@@ -107,6 +103,7 @@ img {
     max-width: 768px;
   }
 }
+
 @media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
@@ -194,6 +191,7 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--accent-cl-100);
+  padding: 17px 0;
 
   .logo-dark {
   color: var(--primary-cl);
@@ -260,8 +258,7 @@ img {
 }
 
 .contacts-list {
-  display: flex;
-  gap: 40px; 
+  display: none;
 }
 
 .contacts-link {
