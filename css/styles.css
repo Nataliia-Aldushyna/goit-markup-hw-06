@@ -270,6 +270,20 @@ img {
 .contacts-link:focus {
   color: var(--accent-cl-200);
 }
+
+@media screen and (min-width: 1158px) {
+.logo {
+margin-right: 76px;
+}
+.contacts-list {
+  flex-direction: row;
+  gap: 40px;
+}
+  .contacts-link {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
 /* #endregion */
 
 /* #region Hero*/
