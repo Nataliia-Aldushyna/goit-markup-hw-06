@@ -65,7 +65,6 @@ ol {
 
 address {
   font-style: normal;
-  display: none;
 }
 
 a {
@@ -99,11 +98,10 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-  .container {
+  .container{
     max-width: 768px;
   }
 }
-
 @media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
@@ -172,11 +170,9 @@ img {
   border-bottom: 1px solid var(--light-cl-100);
   box-shadow: var(--primary-shadow);
 }
-
 .header .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 /* #endregion */
 
@@ -211,9 +207,7 @@ img {
 }
 
 .nav-menu {
-  display: flex;
-  align-items: center;
-  gap: 40px;
+  display: none;
 }
 
 .nav-menu-link {
@@ -258,6 +252,8 @@ img {
 }
 
 .contacts-list {
+  /* display: flex;
+  gap: 40px;  */
   display: none;
 }
 
@@ -271,18 +267,11 @@ img {
   color: var(--accent-cl-200);
 }
 
-@media screen and (min-width: 1158px) {
-.logo {
-margin-right: 76px;
-}
-.contacts-list {
-  flex-direction: row;
-  gap: 40px;
-}
-  .contacts-link {
-    font-size: 16px;
-    line-height: 1.5;
-  }
+.burger-menu-btn {
+  padding: 0;
+  line-height: 0;
+  background-color: transparent;
+  cursor: pointer;
 }
 /* #endregion */
 
