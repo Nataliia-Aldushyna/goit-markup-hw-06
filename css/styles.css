@@ -179,7 +179,6 @@ img {
 
 /* #region Logo */
 .logo {
-  margin-right: 76px;
   font-family: var(--secondary-font);
   font-size: 18px;
   font-weight: 700;
@@ -210,28 +209,50 @@ img {
   display: none;
 }
 
-.nav-menu-link {
-  position: relative;
-  display: block;
-  padding: 24px 0;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--primary-cl);
-  transition: color var(--transition);
+.contacts-list {
+  display: none;
 }
 
-.nav-menu-link:hover,
-.nav-menu-link:focus {
+.burger-menu-btn {
+  padding: 0;
+  line-height: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+@media screen and (min-width:768px) {
+  .logo {
+    margin-right: 120px;
+  }
+
+  .nav-menu {
+    display: flex;
+     gap: 40px;
+  }
+
+  .nav-menu-link {
+    position: relative;
+    display: block;
+    padding: 24px 0;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--primary-cl);
+    transition: color var(--transition);
+  }
+
+  .nav-menu-link:hover,
+  .nav-menu-link:focus {
     color: var(--accent-cl-200);
-}
+  }
 
-.current {
-  position: relative;
-  color: var(--accent-cl-200);
-}
+  .current {
+    position: relative;
+    color: var(--accent-cl-200);
+  }
 
-.current::after {
+  .current::after {
     content: '';
     position: absolute;
     left: 0;
@@ -240,39 +261,58 @@ img {
     height: 4px;
     border-radius: 2px;
     background-color: var(--accent-cl-200);
+  }
+
+  .contacts {
+    display: block;
+  }
+
+   .contacts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .header-contacts {
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+    font-size: 12px;
+    color: var(--dark-cl);
+    transition: color var(--transition);
+    justify-content: space-between;
+  }
+
+  .contacts-link {
+    padding: 24px 0;
+    transition: color var(--transition);
+  }
+
+  .contacts-link:hover, 
+  .contacts-link:focus {
+    color: var(--accent-cl-200);
+  }
+
+  .burger-menu-btn {
+    display: none;
+  }
 }
 
-.header-contacts {
-  display: flex;
-  align-items: center;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--dark-cl);
-  transition: color var(--transition);
+@media screen and (min-width: 1158px) {
+  .logo {
+    margin-right: 76px;
+  }
+
+  .contacts-list {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .contacts-link {
+    font-size: 16px;
+    line-height: 1.5;
+  }
 }
 
-.contacts-list {
-  /* display: flex;
-  gap: 40px;  */
-  display: none;
-}
-
-.contacts-link {
-  padding: 24px 0;
-  transition: color var(--transition);
-}
-
-.contacts-link:hover, 
-.contacts-link:focus {
-  color: var(--accent-cl-200);
-}
-
-.burger-menu-btn {
-  padding: 0;
-  line-height: 0;
-  background-color: transparent;
-  cursor: pointer;
-}
 /* #endregion */
 
 /* #region Hero*/
