@@ -73,7 +73,7 @@
 
     <main>
       <!-- #region Hero -->
-      <section class="hero section hide">
+      <section class="hero section">
         <div class="container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
           <button class="btn hero-btn" type="button">Order Service</button>
@@ -140,7 +140,7 @@
       <!-- #endregion -->
 
       <!-- #region Team -->
-      <section class="team section hide">
+      <section class="team section">
         <div class="container">
           <h2 class="team-title">Our Team</h2>
           <ul class="team-list card-set">
@@ -418,7 +418,7 @@
       <!-- #endregion -->
 
       <!-- #region Portfolio -->
-      <section class="portfolio section hide">
+      <section class="portfolio section">
         <div class="container">
           <h2 class="portfolio-title">Our Portfolio</h2>
           <ul class="portfolio-list card-set">
@@ -549,7 +549,7 @@
     </main>
 
     <!-- #region Footer -->
-    <footer class="footer section hide">
+    <footer class="footer section">
       <div class="container">
         <div class="footer-left">
           <a class="logo footer-logo" href="./index.html"
@@ -729,6 +729,109 @@
         </form>
       </div>
     </div>
+    <!-- #endregion -->
+
+    <!-- #region Mobile menu-->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true" data-menu>
+      <button
+        class="mobile-menu-btn"
+        type="button"
+        aria-label="Mobile menu close button"
+        aria-expanded="false"
+        data-menu-close
+      >
+        <svg class="mobile-menu-icon" width="8" height="8">
+          <use href="./images/icons.svg#cancel"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu-list">
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link link active" href="">Studio</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link link" href="">Portfolio</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link link" href="">Contacts</a>
+        </li>
+      </ul>
+
+      <ul class="mobile-menu-contacts">
+        <li class="mobile-menu-contacts-item">
+          <a
+            class="mobile-menu-contacts-link accent link"
+            href="tel:+110001111111"
+          >
+            +11 (000) 111-11-11
+          </a>
+        </li>
+        <li class="mobile-menu-contacts-item">
+          <a
+            class="mobile-menu-contacts-link link"
+            href="mailto:info@devstudio.com"
+          >
+            info@devstudio.com
+          </a>
+        </li>
+      </ul>
+
+      <ul class="mobile-menu-socials socials">
+        <li class="socials-item">
+          <a
+            class="socials-link"
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Link to Facebook site"
+          >
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a
+            class="socials-link"
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Link to Instagram site"
+          >
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a
+            class="socials-link"
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Link to Twitter site"
+          >
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item">
+          <a
+            class="socials-link"
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Link to Linkedin site"
+          >
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
     <!-- #endregion -->
   </body>
 </html>
