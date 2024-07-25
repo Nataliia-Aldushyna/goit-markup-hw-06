@@ -219,6 +219,8 @@ img {
   display: none;
 }
 
+/* #endregion */
+
 /* region Mobile elements */
 .burger-menu-btn {
   padding: 0;
@@ -227,8 +229,6 @@ img {
   cursor: pointer;
   border: none;
 }
-
-/* #endregion */
 
 @media screen and (min-width:768px) {
   .logo {
@@ -365,7 +365,7 @@ img {
 
 .hero-title {
     max-width: 215px;
-    margin: 0 auto 72px auto;
+    margin: 0 auto;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.11;
@@ -384,7 +384,7 @@ img {
 
 .hero-btn{
   display: block;
-  margin: 0 auto;
+  margin: 48px auto 0;
 }
 
 .btn:hover, 
@@ -921,7 +921,7 @@ footer .container {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    /* backdrop-filter: blur(2px); */
+    backdrop-filter: blur(2px);
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -936,16 +936,16 @@ footer .container {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%;
-    width: 408px;
+    max-width: 408px;
+    width: calc(100% - 32px);
     min-height: 584px;
-    padding: 24px;
-    padding-top: 72px;
+    padding: 72px 24px 24px 24px;
+  
     background-color: var(--light-cl-200);
     border-radius: var(--radius);
     box-shadow: var(--modal-shadow);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: transform;
+    /* transition-property: transform; */
 }
 
 .modal-close-btn {

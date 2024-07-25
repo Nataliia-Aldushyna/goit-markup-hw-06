@@ -1,4 +1,4 @@
-import 'modern-normalize';
+// import 'modern-normalize';
 
 const modalRefs = {
   openModalBtn: document.querySelector('[data-modal-open]'),
