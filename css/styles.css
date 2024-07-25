@@ -328,7 +328,7 @@ img {
 .hero {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 188px 0;
+    /* padding: 188px 0; */
     background: var(--primary-cl);
     background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -340,14 +340,46 @@ img {
   background-position: center;
 }
 
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+      rgba(47, 48, 58, 0.8),
+      rgba(47, 48, 58, 0.8)),
+      url('../images/hero/people-office-bg@2x.jpg');
+  }
+
+@media only screen and (min-width: 768px) {
+  .hero {
+    padding: 119px 0;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .hero {
+    padding: 188px 0;
+  }
+}
+}
+
 .hero-title {
-    max-width: 496px;
-    margin: 0 auto 48px auto; 
-    font-size: 56px;
-    line-height: 1.07;
+    max-width: 215px;
+    margin: 0 auto 72px auto;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
     letter-spacing: 0.02em;
     text-align: center;
     color: var(--light-cl);
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-title {
+    max-width: 496px;
+    font-size: 56px;
+    margin: 0 auto 48px auto; 
+  }
 }
 
 .hero-btn{
