@@ -19,7 +19,7 @@
     --dark-cl: rgb(67, 68, 85);
     --dark-cl-100: rgb(142, 143, 153);
     --dark-cl-200: rgba(46, 47, 66, 0.4);
-    --dark-cl-300: rgba(46, 47, 66, 0.7);
+    --dark-cl-300: rgba(46, 47, 66, 0.702);
     --footer-hover: rgb(49, 208, 170);
 
     /* Others */
@@ -1125,5 +1125,116 @@ input[type="checkbox"]:checked + .modal-form-desc > .modal-form-checkbox {
     text-decoration: underline;
     color: var(--accent-cl-100);
 }
+
+/* #endregion */
+
+/* #region Mobile menu*/
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+
+  padding: 72px 16px 40px;
+  background-color: var(--light-cl);
+
+  transform: translateX(100%);
+  visibility: hidden;
+  transition: 600ms ease-in-out;
+  transition-property: transform, visibility;
+}
+
+.mobile-menu.is-open {
+  transform: translateX(0);
+  visibility: visible;
+}
+
+.mobile-menu-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.mobile-menu-list {
+  margin-bottom: auto;
+}
+
+.mobile-menu-item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.mobile-menu-link {
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.72px;
+  color: var(--primary-cl);
+}
+
+.mobile-menu-link.active {
+  color: var(--accent-cl-100);
+}
+
+.mobile-menu-contacts {
+  margin-bottom: 48px;
+}
+
+.mobile-menu-contacts-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.mobile-menu-contacts-link {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.4px;
+  color: var(--dark-cl);
+}
+
+.mobile-menu-contacts-link.accent {
+  color: var(--accent-cl-100);
+}
+
+.mobile-menu-socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 40px;
+}
+
+.socials-item {
+  width: 40px;
+  height: 40px;
+}
+
+.socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-cl-100);
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.socials-link .socials-icon {
+  fill: var(--secondary-cl);
+}
+
 
 /* #endregion */
