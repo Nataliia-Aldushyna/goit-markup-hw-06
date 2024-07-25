@@ -1,31 +1,31 @@
-// import 'modern-normalize';
+import 'modern-normalize';
 
-const modal = document.querySelector('.js-modal');
-const openBtn = document.querySelector('.js-open-btn');
-const closeBtn = document.querySelector('.js-close-btn');
-
-const toggleModal = () => {
-  modal.classList.toggle('is-open');
+const modalRefs = {
+  openModalBtn: document.querySelector('[data-modal-open]'),
+  closeModalBtn: document.querySelector('[data-modal-close]'),
+  modal: document.querySelector('[data-modal]'),
 };
 
-openBtn.onclick = toggleModal;
-closeBtn.onclick = toggleModal;
+const toggleModal = () => {
+  modalRefs.modal.classList.toggle('is-open');
+};
 
-const mobileMuneRefs = {
-  mobileMenu: document.querySelector('.js-mobile-menu'),
-  openMenuBtn: document.querySelector('.js-open-menu'),
-  closeMenuBtn: document.querySelector('.js-close-menu'),
+modalRefs.openModalBtn.onclick = toggleModal;
+modalRefs.closeModalBtn.onclick = toggleModal;
+
+const mobileMenuRefs = {
+  mobileMenu: document.querySelector('[data-menu]'),
+  openMenuBtn: document.querySelector('[data-menu-button]'),
+  closeMenuBtn: document.querySelector('[data-menu-close]'),
 };
 
 const toggleMenu = () => {
-  const isMenuOpen =
-    mobileMuneRefs.openMenuBtn.getAttribute('aria-expanded') === 'true' ||
-    false;
+  const isMenuOpen = mobileMenuRefs.openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
 
-  mobileMuneRefs.mobileMenu.classList.toggle('is-open');
-  mobileMuneRefs.mobileMenu.setAttribute('aria-hidden', isMenuOpen);
-  mobileMuneRefs.openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
+  mobileMenuRefs.mobileMenu.classList.toggle('is-open');
+  mobileMenuRefs.mobileMenu.setAttribute('aria-hidden', isMenuOpen);
+  mobileMenuRefs.openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
 };
 
-mobileMuneRefs.openMenuBtn.addEventListener('click', toggleMenu);
-mobileMuneRefs.closeMenuBtn.addEventListener('click', toggleMenu);
+mobileMenuRefs.openMenuBtn.addEventListener('click', toggleMenu);
+mobileMenuRefs.closeMenuBtn.addEventListener('click', toggleMenu);
