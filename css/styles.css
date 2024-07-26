@@ -347,8 +347,9 @@ img {
   screen and (min-resolution: 2dppx) {
   .hero {
     background-image: linear-gradient(
-      rgba(47, 48, 58, 0.8),
-      rgba(47, 48, 58, 0.8)),
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+      ),
       url('../images/hero/people-office-bg@2x.jpg');
   }
 }
@@ -408,9 +409,7 @@ img {
 
 .features-list {
     --items: 1;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
+    --row-indent: 72px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -430,7 +429,7 @@ img {
 }
 
 @media only screen and (min-width: 1158px) {
-  .features .features-wrapper {
+  .features-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -443,7 +442,7 @@ img {
 }
 }
 
-.features .features-caption {
+.features-caption {
     margin-bottom: 8px;
     font-weight: 500;
     font-size: 20px;
@@ -453,13 +452,13 @@ img {
 }
 
 @media only screen and (max-width: 767px) {
-  .features .features-caption {
+  .features-caption {
     text-align: center;
   }
 }
 
 @media only screen and (max-width: 1157px) {
-  .features .features-caption {
+  .features-caption {
     font-size: 36px;
     font-weight: 700;
     line-height: 1.1;
