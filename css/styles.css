@@ -108,6 +108,7 @@ img {
     padding: 0 16px;
   }
 }
+
 @media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
@@ -400,32 +401,31 @@ img {
 }
 
 @media only screen and (min-width: 1158px) {
-  .section-features {
+  .features {
     padding: 120px 0;
   }
 }
 
-.features .features-list {
+.features-list {
     --items: 1;
     display: flex;
     flex-wrap: wrap;
-    column-gap: 24px;
-    row-gap: 72px;
+    gap: 24px;
 }
 
 @media only screen and (min-width: 768px) {
-  .features .features-item {
+  .features-item {
     flex-basis: calc((100% - 24px) / 2);
   }
 }
 
 @media only screen and (min-width: 1158px) {
-  .features .features-item {
+  .features-item {
     flex-basis: calc((100% - 72px) / 4);
   }
 }
 
-.features .features-wrapper{
+.features-wrapper{
   display: none;
 }
 
@@ -510,7 +510,6 @@ img {
 }
 
 .team-item {
-    /* --items: 1; */
     background: var(--light-cl);
     border-radius: 0 0 4px 4px;
     overflow: hidden;
@@ -582,8 +581,6 @@ img {
 }
 
 .portfolio-list {
-  /* --items: 3;
-  --row-indent: 48px; */
     display: flex;
     flex-wrap: wrap;
     column-gap: 24px;
@@ -671,38 +668,35 @@ img {
     background: var(--primary-cl);
 }
 
-footer .container {
+.footer .footer-content {
     display: flex;
-    /* align-items: baseline; */
     align-items: center;
     justify-content: start;
     flex-direction: column;
     flex-wrap: wrap;
-    /* max-width: 500px; */
+    max-width: 500px;
     margin: 0 auto;
 }
 
 @media only screen and (min-width: 768px) {
-  footer .container {
+  .footer .footer-content {
     flex-direction: row;
   }
 }
 
 @media only screen and (min-width: 1158px) {
-  footer .container {
-    /* max-width: unset; */
+  .footer .footer-content {
+    max-width: unset;
     align-items: baseline;
   }
 }
 
 .footer-left {
     max-width: 264px;
-    /* margin-right: 120px; */
     margin-bottom: 72px;
 }
 
 .footer-middle {
-    /* margin-right: auto; */
     margin-bottom: 72px;
 }
 
@@ -732,8 +726,6 @@ footer .container {
 
 .footer-logo {
   display: inline-block;
-  margin-right: 0;
-  margin-bottom: 16px
 }
 
 @media only screen and (max-width: 767px) {
@@ -802,11 +794,6 @@ footer .container {
     background-color: var(--footer-hover);
 }
 
-/* .footer-right {
-    max-width: 453px;
-    width: 100%;
-} */
-
 @media only screen and (max-width: 767px) {
   .footer-right {
     width: 100%;
@@ -852,11 +839,6 @@ footer .container {
     width: 100%;
   }
 }
-
-/* .newsletter-field {
-    max-width: 264px;
-    width: 100%;
-} */
 
 .newsletter-input {
     font-size: 12px;
@@ -946,7 +928,6 @@ footer .container {
     border-radius: var(--radius);
     box-shadow: var(--modal-shadow);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    /* transition-property: transform; */
 }
 
 .modal-close-btn {
@@ -1080,9 +1061,6 @@ footer .container {
 
 .modal-form-agreement {
     margin-bottom: 24px;
-    /* display: flex;
-    align-items: center;
-    gap: 8px; */
 }
 
 .modal-form-desc {
@@ -1105,12 +1083,6 @@ footer .container {
     fill: transparent;
     cursor: pointer;
 }
-
-/* .modal-agreement-input:checked + .modal-form-desc > .modal-form-checkbox {
-    background-color: #404bbf;
-    border: none;
-    fill: #ffffff;
-} */
 
 input[type="checkbox"]:checked + .modal-form-desc > .modal-form-checkbox {
   background-color: var(--accent-cl-200);
@@ -1236,6 +1208,5 @@ input[type="checkbox"]:checked + .modal-form-desc > .modal-form-checkbox {
 .socials-link .socials-icon {
   fill: var(--secondary-cl);
 }
-
 
 /* #endregion */
